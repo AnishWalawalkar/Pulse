@@ -7,7 +7,7 @@ socketio = SocketIO(app)
 
     
 	
-@socketio.on('my event')
+@socketio.on('event')
 def test_message(message):
     print('my response', message)
 
