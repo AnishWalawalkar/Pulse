@@ -7,7 +7,11 @@ window.onload = function() {
             if(request.action == 'read') {
                 console.log('here');
                 $.post('http://localhost:5000/', {'data_to_analyze': request.data}, function(resp) {
-                    console.log(resp);
+                    //populate popup
+		    //send to contentjs
+		    chrome.tabs.query({active:true, currentWindow:true}, function(tabs) {
+			chrome.tabs.sendMessage(tabs[0].id, {action: "readAPI"});
+		    });
                 });
          }
     });
