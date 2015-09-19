@@ -6,7 +6,7 @@ window.onload = function() {
     chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
             if(request.action == 'read') {
                 console.log('here');
-                $.post('http://localhost:5000/', {'name':'anish'}, function(resp) {
+                $.post('http://localhost:5000/', {'data_to_analyze': request.data}, function(resp) {
                     console.log(resp);
                 });
          }
