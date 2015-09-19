@@ -1,7 +1,15 @@
+(function() { setTimeout(function() {
+    
+    chrome.runtime.onMessage.addListener(function (request, sender, sendResponse){
+        if(request.action == "readPage"){
 
-$(document).ready(function() {
-    var text = $(".postArticle p").text();
-    chrome.runtime.sendMessage({data: text});
-});
+        var text = $(".postArticle p").text();
+        chrome.runtime.sendMessage({data: text, action:"read"});
+        console.log("ready");
+        }
+    });
+    
+   }, 1000);
 
+}());
 
