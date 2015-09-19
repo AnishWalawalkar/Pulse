@@ -5,8 +5,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
-    
-	
+
 @socketio.on('event')
 def handle_json(json):
     print('received json: ' + str(json))
@@ -14,8 +13,8 @@ def handle_json(json):
 
 @socketio.on('connect')
 def emit_message():
-	emit('event', 'I\'m connected!')
-	
+    emit('event', 'I\'m connected!')
+
 
 if __name__ == '__main__':
     print('here')
