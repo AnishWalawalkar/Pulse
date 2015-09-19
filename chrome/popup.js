@@ -1,4 +1,5 @@
+var socket = io.connect('http://localhost:5000');
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-	$(document).body.innerHTML="text";
+	socket.emit('event', {data: request.data};
     });
