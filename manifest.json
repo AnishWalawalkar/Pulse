@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name" : "ViewAll",
+    "version": "1",
+
+    "description": "A detector for biases",
+    "browser_action": {
+	"default_icon": "logo1.png",
+	"default_popup": "popup.html"
+	},
+    "permissions" : [
+	"activeTab"
+	]
+}
