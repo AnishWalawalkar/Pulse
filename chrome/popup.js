@@ -6,11 +6,10 @@ window.onload = function() {
     chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
             if(request.action == 'read') {
                 console.log('here');
-                var socket = io.connect('http://127.0.0.1:5000');
-                socket.on('connect', function(response) {
-                socket.emit('event', {data: request.data});
-             }); 
-         }          
+                $.post('http://localhost:5000/', {'name':'anish'}, function(resp) {
+                    console.log(resp);
+                });
+         }
     });
 };
 
