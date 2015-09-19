@@ -11,7 +11,7 @@ window.onload = function() {
                     //populate popup
 		    //send to contentjs
 		    chrome.tabs.query({active:true, currentWindow:true}, function(tabs) {
-			chrome.tabs.sendMessage(tabs[0].id, {action: "readAPI"});
+			chrome.tabs.sendMessage(tabs[0].id, {action: "readAPI", keywords: resp.keywords});
 		    });
                 });
          }
