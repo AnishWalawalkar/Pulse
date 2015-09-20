@@ -41,7 +41,7 @@ def get_sentiment():
     if request.method == 'POST':
         data = dict(request.form)['data_to_analyze']
         return json.dumps({
-            'sentiment': indicoio.sentiment(data)
+            'sentiment': round(indicoio.sentiment(data)[0]*10)
         })
 
 @app.route('/language', methods=['GET', 'POST'])
@@ -49,7 +49,7 @@ def get_language():
     if request.method == 'POST':
         data = dict(request.form)['data_to_analyze']
         return json.dumps({
-            'language': sort(indicoio.language(data)[0])
+            'language': sort(indicoio.language(data)[0])[0]
         })
 
 @app.route('/political', methods=['GET', 'POST'])

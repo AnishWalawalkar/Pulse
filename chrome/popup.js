@@ -21,20 +21,24 @@ window.onload = function() {
                 });
 
                 $.post('http://localhost:5000/sentiment', {'data_to_analyze': request.data}, function(resp) {
-                    console.log(resp);
                     resp = JSON.parse(resp);
+                    console.log(resp.sentiment);
+                    img_src = "Img/emojis/" + resp.sentiment + ".png"
+                    $('#sentiment').prepend('<img src = ' + img_src +' width="60" height="60">');
                 });
                 $.post('http://localhost:5000/language', {'data_to_analyze': request.data}, function(resp) {
-                    console.log(resp);
                     resp = JSON.parse(resp);
+                    $('#language').text(resp.language[0]);
                 });
                 $.post('http://localhost:5000/political', {'data_to_analyze': request.data}, function(resp) {
                     console.log(resp);
                     resp = JSON.parse(resp);
                 });
                 $.post('http://localhost:5000/text_tags', {'data_to_analyze': request.data}, function(resp) {
-                    console.log(resp);
                     resp = JSON.parse(resp);
+                    $('#text_tag1').text(resp.text_tags[0][0]);
+                    $('#text_tag2').text(resp.text_tags[1][0]);
+                    $('#text_tag3').text(resp.text_tags[2][0]);
                 });
         }
     });

@@ -5,35 +5,35 @@
         <link rel="stylesheet" type="text/css" href="style.css"/>
         <script src="chart.js"></script>
         <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
-        <script src="popup.js"></script>   
+        <script src="popup.js"></script>
     </head>
     <body>
 	<!doctype html>
         <div class = "master">
             <!--<div style="white-space: nowrap;">
-                <h1>My App</h1> 
+                <h1>My App</h1>
             </div>-->
 
-                <li> 
-                    <img src = "Img/emojis/1.png" width="60" height="60">
+                <li id="sentiment">
+
                 </li>
                 <hr>
                 <li>
-                    <h2> <span class = "result" id = "language">English</span></h2>
+                    <h2> <span class = "result" id = "language"></span></h2>
                 </li>
-                <hr>  
+                <hr>
                         <li>
                             <h1>Categories</h1>
                         </li>
 
                             <li>
-                                <h2><span class = "result">Politics</span></h2>
+                                <h2><span class = "result" id="text_tag1"></span></h2>
                             </li>
                             <li>
-                                <h2><span class = "result">Health</span></h2>
+                                <h2><span class = "result" id="text_tag2"></span></h2>
                             </li>
                             <li>
-                                <h2><span class = "result">Random</span></h2>
+                                <h2><span class = "result" id="text_tag3"></span></h2>
                             </li>
                  <hr>
                  <div class="legend">
@@ -48,9 +48,9 @@
                             <li><span class="cons"></span> <div id = "key3">Conservative</div></li>
                             <li><div id = "key4">Green</div> <span class="grn"></span></li>  
                  </div> 
-        </div>      
+
     </body>
-    
+
 
 </html>
 
