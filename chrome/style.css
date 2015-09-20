@@ -102,9 +102,9 @@ hr {
 .legend span { border: 1px solid #ccc;  width: 12px; height: 12px; margin: 3px; }
 /* your colors */
 .legend .libt { background-color: #FDB45C; float: left;}
-.legend .libr { background-color: #46BFBD; float: right;}
+.legend .libr { background-color: #949FB1; float: right;}
 .legend .cons { background-color: #F7464A;float: left; }
-.legend .grn { background-color: #949FB1; float: right;}
+.legend .grn { background-color: #46BFBD; float: right;}
 
 #key1{vertical-align: middle;}
 #key2{vertical-align: middle;}
