@@ -65,7 +65,7 @@ hr {
     border-bottom: 1px dashed #ccc;
     background: #999;
 }
-.data {
+.row {
 	margin: auto;
 	display: table-row;
 	vertical-align: middle;
@@ -98,7 +98,7 @@ hr {
 
 /* basic positioning */
 .legend { list-style: none;}
-.legend li { float: left; margin: 5px; font-size: 10px; }
+.legend li {  margin: auto; font-size: 10px; }
 .legend span { border: 1px solid #ccc;  width: 12px; height: 12px; margin: 3px; }
 /* your colors */
 .legend .libt { background-color: #FDB45C; float: left;}
@@ -106,8 +106,8 @@ hr {
 .legend .cons { background-color: #F7464A;float: left; }
 .legend .grn { background-color: #949FB1; float: right;}
 
-#key1{vertical-align: middle; float: left}
-#key2{vertical-align: middle; float: left}
-#key3{vertical-align: middle; float: left}
-#key4{vertical-align: middle; float: left}
+#key1{vertical-align: middle;}
+#key2{vertical-align: middle;}
+#key3{vertical-align: middle;}
+#key4{vertical-align: middle;}
 
