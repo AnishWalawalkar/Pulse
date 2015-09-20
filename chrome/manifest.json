@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name" : "ViewAll",
+    "name" : "VTAS",
     "version": "1",
 
     "description": "A detector for biases",
