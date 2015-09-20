@@ -3,8 +3,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
-        <script src="chart.min.js"></script>
-        <script type="text/javascript" src="socket.io.min.js"></script>
+        <script src="chart.js"></script>
         <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
         <script src="popup.js"></script>   
     </head>
@@ -37,9 +36,18 @@
                                 <h2><span class = "result">Random</span></h2>
                             </li>
                  <hr>
-                    <div id="canvas-holder">
-			             <canvas id="chart-area" width="180" height="180"/>
-		            </div>  
+                 <div class="legend">
+                            <li><span class="libt"></span> <div id = "key1">Libertarian</div></li>
+                            <li><div id = "key2">Liberal</div> <span class="libr"></span></li>     
+                 </div> 
+                 <div id="canvas-holder">
+			             <canvas id="chart-area" width="150" height="150"/>
+
+		         </div> 
+                 <div class="legend">    
+                            <li><span class="cons"></span> <div id = "key3">Conservative</div></li>
+                            <li><div id = "key4">Green</div> <span class="grn"></span></li>  
+                 </div> 
         </div>      
     </body>
     

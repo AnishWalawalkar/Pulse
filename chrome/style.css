@@ -1,7 +1,7 @@
 body {
 	background-color: #FAFAFA;
 	background-image: url("Img/tiny_grid.png");
-    opacity: 0.6;
+    opacity: 0.8;
 	font-family: Raleway;
 	font-weight: lighter;
 }
@@ -60,6 +60,11 @@ li {
 	white-space: nowrap;
 	text-align: center;
 }
+hr {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
 .data {
 	margin: auto;
 	display: table-row;
@@ -90,3 +95,19 @@ li {
 .result {
 	color: #1565C0;
 }
+
+/* basic positioning */
+.legend { list-style: none;}
+.legend li { float: left; margin: 5px; font-size: 10px; }
+.legend span { border: 1px solid #ccc;  width: 12px; height: 12px; margin: 3px; }
+/* your colors */
+.legend .libt { background-color: #FDB45C; float: left;}
+.legend .libr { background-color: #46BFBD; float: right;}
+.legend .cons { background-color: #F7464A;float: left; }
+.legend .grn { background-color: #949FB1; float: right;}
+
+#key1{vertical-align: middle; float: left}
+#key2{vertical-align: middle; float: left}
+#key3{vertical-align: middle; float: left}
+#key4{vertical-align: middle; float: left}
+
