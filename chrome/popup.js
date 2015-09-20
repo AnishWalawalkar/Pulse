@@ -5,7 +5,7 @@ window.onload = function() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         chrome.tabs.sendMessage(tabs[0].id, {action:"readPage"})
     });
-	
+
     chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
             if(request.action == 'read') {
                 console.log('here');
@@ -61,6 +61,8 @@ window.onload = function() {
                     var ctx = document.getElementById("chart-area").getContext("2d");
 	                window.myPie = new Chart(ctx).Doughnut(pieData);
                 });
+                $('#legend1').prepend('<li style="float : left; white-space: nowrap;"><span class="cons"></span> <div id = "key3">Conservative</div></li><li style="float : right; white-space: nowrap;"><div id = "key4">Green</div> <span class="grn"></span></li> ')
+                $("#legend2").prepend('<li style="float : left; white-space: nowrap;"><span class="libt"></span> <div id = "key1">Libertarian</div></li><li style="float : right; white-space: nowrap;"><div id = "key2">Liberal</div> <span class="libr"></span></li>')
                 $.post('http://localhost:5000/text_tags', {'data_to_analyze': request.data}, function(resp) {
                     resp = JSON.parse(resp);
                     $('#text_tag1').text(resp.text_tags[0][0]);
