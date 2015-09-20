@@ -3,7 +3,14 @@
 window.onload = function() {
     console.log("loaded");
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, {action:"readPage"})
+    	if (tabs[0].url.indexOf("edit"))
+    	{
+    		chrome.tabs.sendMessage(tabs[0].id, {action:"editPage"});	
+    	}
+    	else
+    	{
+        	chrome.tabs.sendMessage(tabs[0].id, {action:"readPage"});	
+    	}
     });
 	var ctx = document.getElementById("chart-area").getContext("2d");
 				window.myPie = new Chart(ctx).Pie(pieData);
