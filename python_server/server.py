@@ -73,7 +73,7 @@ def get_keywords():
     if request.method == 'POST':
         data = dict(request.form)['data_to_analyze']
         return json.dumps({
-            'keywords': indicoio.keywords(data, top_n = 15, threshold = 0.2, relative=True)[0].keys()
+            'keywords': indicoio.keywords(data, top_n = 15, threshold = 0.3, relative=True)[0].keys()
         })
 
 if __name__ == '__main__':
