@@ -43,7 +43,8 @@ window.onload = function() {
                $.post('http://localhost:5000/virality', {'data_to_analyze': request.data}, function(resp) {
                     resp = JSON.parse(resp);
                     console.log(resp);
-                    $('#virality').prepend("<h2>Virality Score</h2>\n" + (resp.virality[0]*100).toString().substring(0,4) + "%");
+                    $('#virality').prepend("<h2>Virality Score</h2>\n");
+                    $('#viralityval').prepend((resp.virality[0]*100).toString().substring(0,4) + "%");
                 });
                 $.post('http://localhost:5000/political', {'data_to_analyze': request.data}, function(resp) {
                     console.log(resp);
@@ -114,7 +115,8 @@ window.onload = function() {
                  $.post('http://localhost:5000/virality', {'data_to_analyze': request.data}, function(resp) {
                     resp = JSON.parse(resp);
                     console.log(resp);
-                    $('#virality').text("Virality Score: " + (resp.virality[0]*100).toString().substring(0,4) + "%");
+                    $('#virality').prepend("<h2>Virality Score</h2>\n");
+                    $('#viralityval').prepend((resp.virality[0]*100).toString().substring(0,4) + "%");
                 });
                 $.post('http://localhost:5000/political', {'data_to_analyze': request.data}, function(resp) {
                     console.log(resp);
