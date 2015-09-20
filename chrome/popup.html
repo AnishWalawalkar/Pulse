@@ -6,23 +6,23 @@
         <script src="chart.min.js"></script>
         <script type="text/javascript" src="socket.io.min.js"></script>
         <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
-        <script src="popup.js"></script>   
+        <script src="popup.js"></script>
     </head>
     <body>
 	<!doctype html>
         <div class = "master">
             <!--<div style="white-space: nowrap;">
-                <h1>My App</h1> 
+                <h1>My App</h1>
             </div>-->
 
-                <li> 
-                    <img src = "Img/emojis/1.png" width="60" height="60">
+                <li id="sentiment">
+
                 </li>
                 <hr>
                 <li>
-                    <h2> <span class = "result" id = "language">English</span></h2>
+                    <h2> <span class = "result" id = "language"></span></h2>
                 </li>
-                <hr>  
+                <hr>
                         <li>
                             <h1>Categories</h1>
                         </li>
@@ -39,10 +39,10 @@
                  <hr>
                     <div id="canvas-holder">
 			             <canvas id="chart-area" width="180" height="180"/>
-		            </div>  
-        </div>      
+		            </div>
+        </div>
     </body>
-    
+
 
 </html>
 
