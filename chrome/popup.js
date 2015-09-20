@@ -7,6 +7,7 @@ window.onload = function() {
     	if (tabs[0].url.indexOf("edit") != -1)
     	{
     		console.log("edit");
+    		console.log("NEW");
     		chrome.tabs.sendMessage(tabs[0].id, {action:"writePage"});	
     		console.log("after edit");
     	}
@@ -32,7 +33,7 @@ window.onload = function() {
 
                 $.post('http://localhost:5000/sentiment', {'data_to_analyze': request.data}, function(resp) {
                     resp = JSON.parse(resp);
-                    console.log(resp.sentiment);
+                    console.log(resp.sentiment + '/n');
                     img_src = "Img/emojis/" + resp.sentiment + ".png"
                     $('#sentiment').prepend('<img src = ' + img_src +' width="60" height="60">');
                 });
