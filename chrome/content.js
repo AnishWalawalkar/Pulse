@@ -1,8 +1,9 @@
 function highlight(container, set, spanClass) {
     var content = container.innerText;
-    content = content.split(/[ ,]+/);
+    content = content.split(/[ ,.'’]+/);
     for (i = 0; i < content.length; i++) {
-	if (set.has(content[i])) {
+	var lowerCaseWord = content[i].toLowerCase();
+	if (set.has(lowerCaseWord)) {
 	    content[i] = "<span class='" + spanClass + "' style='font-weight:bold'>" + content[i] + "</span>";
 	}
     }
