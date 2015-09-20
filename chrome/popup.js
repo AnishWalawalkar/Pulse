@@ -42,8 +42,10 @@ window.onload = function() {
                     resp = JSON.parse(resp);
                 });
                 $.post('http://localhost:5000/text_tags', {'data_to_analyze': request.data}, function(resp) {
-                    console.log(resp);
                     resp = JSON.parse(resp);
+                    $('#text_tag1').text(resp.text_tags[0][0]);
+                    $('#text_tag2').text(resp.text_tags[1][0]);
+                    $('#text_tag3').text(resp.text_tags[2][0]);
                 });
         }
     });
