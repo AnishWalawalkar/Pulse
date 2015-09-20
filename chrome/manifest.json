@@ -5,7 +5,7 @@
 
     "description": "A detector for biases",
     "browser_action": {
-	"default_icon": "logo1.png",
+	"default_icon": "logo3.png",
 	"default_popup": "popup.html"
 	},
     "permissions" : [

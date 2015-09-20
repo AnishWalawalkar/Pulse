@@ -32,6 +32,10 @@ def analysis(data):
     print "\n\n\nPolitical"
     for p in politics:
         print p[0], float(p[1]) * 100
+    
+    print "\n\nkeywords"
+    for k in keywords:
+        print k[0], float(k[1]) * 100
 
 
 def main():
