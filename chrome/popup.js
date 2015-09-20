@@ -65,6 +65,7 @@ window.onload = function() {
                 $("#legend2").prepend('<li style="float : left; white-space: nowrap;"><span class="libt"></span> <div id = "key1">Libertarian</div></li><li style="float : right; white-space: nowrap;"><div id = "key2">Liberal</div> <span class="libr"></span></li>')
                 $.post('http://localhost:5000/text_tags', {'data_to_analyze': request.data}, function(resp) {
                     resp = JSON.parse(resp);
+                    $('#category').prepend('<h2>Categories</h2>');
                     $('#text_tag1').text(resp.text_tags[0][0].split(/[_]+/).join(" "));
                     $('#text_tag2').text(resp.text_tags[1][0].split(/[_]+/).join(" "));
                     $('#text_tag3').text(resp.text_tags[2][0].split(/[_]+/).join(" "));
