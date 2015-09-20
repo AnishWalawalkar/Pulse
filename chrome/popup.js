@@ -32,8 +32,21 @@ window.onload = function() {
 
                 $.post('http://localhost:5000/sentiment', {'data_to_analyze': request.data}, function(resp) {
                     resp = JSON.parse(resp);
+		    img_src = null;
                     console.log(resp.sentiment + '/n');
-                    img_src = "Img/emojis/" + resp.sentiment + ".png"
+		    if (resp.sentiment >=0 && resp.sentiment < 5){
+			img_src = "Img/emojis/negative.png";
+		    }
+		    else if(resp.sentiment>=5 && resp.sentiment <8) {
+			img_src = "Img/emojis/neutral.png";
+
+		    }
+		    
+		    else {
+			img_src = "Img/emojis/positive.png";
+
+		    }
+		    
                     $('#sentiment').prepend('<img src = ' + img_src +' width="60" height="60">');
                 });
                 $.post('http://localhost:5000/language', {'data_to_analyze': request.data}, function(resp) {
