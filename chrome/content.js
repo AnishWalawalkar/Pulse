@@ -13,14 +13,14 @@ function highlight(container, set, spanClass) {
 
 
 (function() { setTimeout(function() {
-    
+
     chrome.runtime.onMessage.addListener(function (request, sender, sendResponse){
         if(request.action == "readPage"){
 	    var text = $(".postArticle p").text();
 	    chrome.runtime.sendMessage({data: text, action:"read"});
 	    console.log("ready");
         }
-	if (request.action == "readAPI") {
+	if (request.action == "readKeywords") {
 	   var keywordSet = new Set(request.keywords);
 	   var paragraphs = $(".postArticle-content p");
 	   for (j = 0; j < paragraphs.length; j++) {
@@ -28,7 +28,7 @@ function highlight(container, set, spanClass) {
 	   }
 	}
     });
-    
+
    }, 1000);
 
 }());
