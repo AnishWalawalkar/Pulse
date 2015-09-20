@@ -76,12 +76,12 @@ def get_keywords():
             'keywords': indicoio.keywords(data, top_n = 15, threshold = 0.3, relative=True)[0].keys()
         })
 
-@app.route('/twitter_engagement', methods=['GET', 'POST'])
+@app.route('/virality', methods=['GET', 'POST'])
 def get_virality():
     if request.method == 'POST':
         data = dict(request.form)['data_to_analyze']
         return json.dumps({
-            'keywords': indicoio.twitter_engagement(data)
+            'virality': indicoio.twitter_engagement(data)
         })
 
 @app.route('/named_entities', methods=['GET', 'POST'])
