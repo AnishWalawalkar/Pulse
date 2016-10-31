@@ -9,6 +9,7 @@ Analyse Medium articles for subject, biases, etc and highlight keywords.
 
 ## Usage
 1. On Chrome, Extensions, click on Load unpacked extension, select the 'chrome' folder to load
+2. In the Pulse/python_server directory run 'python ./server.py'
 2. Go to any Medium articles. 
 3. Click on the magnifying lens icon
 
