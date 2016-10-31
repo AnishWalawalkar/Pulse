@@ -3,9 +3,8 @@ from flask import Flask, request
 import indicoio
 import json
 import operator as op
-import threading
 
-indicoio.config.api_key = 'b1b29987309a10beab53d428a70699d3'
+indicoio.config.api_key = '53fdb0f7d4d51903f2ac2d1575e6c416'
 
 app = Flask(__name__)
 
